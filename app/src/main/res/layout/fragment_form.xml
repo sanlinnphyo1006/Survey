@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".FormFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="32dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:background="@drawable/card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="18dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="အစိုးရကျောင်းနှင့် ပုဂ္ဂလိကကျောင်းရွေးချယ်တက်ခြင်းက ကျောင်းသား/သူများအတွက်အရေးကြီးပါသလား။"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_1"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rb_1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="မပြောလို"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="အရေးမကြီး"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_1_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="သာမန်"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_1_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="အရေးကြီး"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_1_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="အလွန်အရေးကြီး"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="18dp"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_title_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ဆရာဆရာမများ၏ သင်ကြားရေးအရည်အချင်းများက ကျောင်းသား/သူများအပေါ်သက်ရောက်မှုရှိသလား။"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_2"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rb_2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="မပြောလို"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="သက်ရောက်မှုမရှိ"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_2_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="လိုအပ်ဆဲ"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_2_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="သက်ရောက်မှုရှိ"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_2_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="အထူးသက်ရောက်မှုရှိ"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="18dp"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_title_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ကျောင်း၏ ဥပတိရုပ်ကောင်းမွန်မှု ရန်ပုံငွေတည်ထောင်ထားရှိမှု၊ အကူအညီရရှိမှုသည် အရေးပါပါသလား။"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_3"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rb_3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="မပြောလို"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="အရေးမကြီး"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="သာမန်"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_3_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="အရေးကြီး"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_3_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="အလွန်အရေးကြီး"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="18dp"
+                android:paddingVertical="18dp"
+                android:text="Submit"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
