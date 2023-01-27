@@ -6,9 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-   <FrameLayout
-       android:id="@+id/frame_main"
+   <LinearLayout
        android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+         <com.google.android.material.appbar.AppBarLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:paddingVertical="8dp">
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Basic Educational Data Factor Influenzing In Rakhine State"
+                      android:textColor="@color/white"
+                      android:textSize="18dp"/>
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="ရခိုင်ပြည်နယ် အခြေခံပညာကျောင်းများတွင် ကျောင်းတက်ရောက်မှု သုတေသနဆိုင်ရာ အချက်အလက်"
+                      android:textColor="@color/white"
+                      android:layout_marginTop="10dp"/>
+               </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+         </com.google.android.material.appbar.AppBarLayout>
+
+         <FrameLayout
+             android:id="@+id/frame_main"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"/>
+
+   </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

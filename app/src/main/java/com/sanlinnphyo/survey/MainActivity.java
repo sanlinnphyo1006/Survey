@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         // first show loading screen
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frame_main, new LoadingFragment());
-        ft.commit();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
