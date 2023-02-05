@@ -6,15 +6,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -38,10 +35,6 @@ public class FormFragment extends Fragment {
 
         Button btnSubmit = view.findViewById(R.id.btn_submit);
 
-        TextView txtTitle1 = view.findViewById(R.id.txt_title_1);
-        TextView txtTitle2 = view.findViewById(R.id.txt_title_2);
-        TextView txtTitle3 = view.findViewById(R.id.txt_title_3);
-
         RadioGroup rg1 = view.findViewById(R.id.rg_1);
         RadioGroup rg2 = view.findViewById(R.id.rg_2);
         RadioGroup rg3 = view.findViewById(R.id.rg_3);
@@ -58,20 +51,21 @@ public class FormFragment extends Fragment {
 
             if(rg1.getCheckedRadioButtonId() != -1){
                 RadioButton rb = view.findViewById(rg1.getCheckedRadioButtonId());
-                data.put(String.valueOf(txtTitle1.getText()), String.valueOf(rb.getText()));
+                data.put("1", String.valueOf(rb.getText()));
             }
 
             if(rg2.getCheckedRadioButtonId() != -1){
                 RadioButton rb = view.findViewById(rg2.getCheckedRadioButtonId());
-                data.put(String.valueOf(txtTitle2.getText()), String.valueOf(rb.getText()));
+                data.put("2", String.valueOf(rb.getText()));
             }
 
             if(rg3.getCheckedRadioButtonId() != -1){
                 RadioButton rb = view.findViewById(rg3.getCheckedRadioButtonId());
-                data.put(String.valueOf(txtTitle3.getText()), String.valueOf(rb.getText()));
+                data.put("3", String.valueOf(rb.getText()));
             }
 
             Toast.makeText(getContext(), "Submitting data.", Toast.LENGTH_SHORT).show();
+            btnSubmit.setText("Submitting");
             btnSubmit.setEnabled(false);
 
             db.collection("survey")
@@ -80,10 +74,18 @@ public class FormFragment extends Fragment {
                     .add(data)
                     .addOnSuccessListener(documentReference -> {
                         Toast.makeText(getContext(), "Successfully uploaded data.", Toast.LENGTH_SHORT).show();
+                        rg1.clearCheck();
+                        rg2.clearCheck();
+                        rg3.clearCheck();
+                        btnSubmit.setText("Submit");
                         btnSubmit.setEnabled(true);
                     })
                     .addOnFailureListener(e -> {
                         Toast.makeText(getContext(), "Oops! Something wrong in uploading data.", Toast.LENGTH_SHORT).show();
+                        rg1.clearCheck();
+                        rg2.clearCheck();
+                        rg3.clearCheck();
+                        btnSubmit.setText("Submit");
                         btnSubmit.setEnabled(true);
                     });
         });

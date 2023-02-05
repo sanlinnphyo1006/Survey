@@ -18,7 +18,8 @@
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="?attr/actionBarSize">
+                android:minHeight="?attr/actionBarSize"
+                android:background="@color/purple_700">
 
                <LinearLayout
                    android:layout_width="match_parent"
@@ -30,12 +31,13 @@
                       android:layout_height="wrap_content"
                       android:text="Basic Educational Data Factor Influenzing In Rakhine State"
                       android:textColor="@color/white"
-                      android:textSize="18dp"/>
+                      android:textSize="14dp"/>
                   <TextView
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
                       android:text="ရခိုင်ပြည်နယ် အခြေခံပညာကျောင်းများတွင် ကျောင်းတက်ရောက်မှု သုတေသနဆိုင်ရာ အချက်အလက်"
                       android:textColor="@color/white"
+                      android:textSize="12sp"
                       android:layout_marginTop="10dp"/>
                </LinearLayout>
 
